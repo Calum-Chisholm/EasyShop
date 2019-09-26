@@ -1,3 +1,4 @@
+DROP TABLE customers;
 DROP TABLE stock;
 DROP TABLE merchants;
 DROP TABLE products;
@@ -18,4 +19,11 @@ CREATE TABLE stock(
   product_id INT8 REFERENCES products(id) ON DELETE CASCADE,
   merchant_id INT8 REFERENCES merchants(id) ON DELETE CASCADE,
   price INT
+);
+
+CREATE TABLE customers(
+  id SERIAL8 PRIMARY KEY,
+  name VARCHAR(255),
+  wallet INT,
+  stock_id INT8 REFERENCES stock(id) ON DELETE CASCADE
 );

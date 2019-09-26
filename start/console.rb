@@ -1,6 +1,7 @@
 require_relative('./models/merchant')
 require_relative('./models/product')
 require_relative('./models/stock')
+require_relative('./models/customer')
 require('pry')
 
 Merchant.delete_all
@@ -30,6 +31,13 @@ new_stock1 = {
 stock1 = Stock.new(new_stock1)
 stock1.save
 
+new_customer = {
+  'name' => 'Ricky',
+  'wallet' => 500
+}
+
+customer1 = Customer.new(new_customer)
+customer1.save
 
 
 # binding.pry
