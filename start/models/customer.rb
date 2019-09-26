@@ -19,4 +19,11 @@ class Customer
     @id = id['id'].to_i
   end
 
+  def update()
+    sql = "UPDATE customers SET (name, wallet, stock_id) = ($1, $2, $3)
+    WHERE id = $4"
+    values = [@name, @wallet, @stock_id, @id]
+    SqlRunner.run(sql, values)
+  end
+
 end
