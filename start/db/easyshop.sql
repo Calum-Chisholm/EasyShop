@@ -1,4 +1,4 @@
-DROP TABLE products_merchants;
+DROP TABLE stock;
 DROP TABLE merchants;
 DROP TABLE products;
 
@@ -13,8 +13,9 @@ CREATE TABLE merchants(
   name VARCHAR(255)
 );
 
-CREATE TABLE products_merchants(
+CREATE TABLE stock(
   id SERIAL8 PRIMARY KEY,
   product_id INT8 REFERENCES products(id) ON DELETE CASCADE,
-  merchant_id INT8 REFERENCES merchants(id) ON DELETE CASCADE
+  merchant_id INT8 REFERENCES merchants(id) ON DELETE CASCADE,
+  price INT
 );

@@ -1,5 +1,6 @@
 require_relative('./models/merchant')
 require_relative('./models/product')
+require_relative('./models/stock')
 require('pry')
 
 Merchant.delete_all
@@ -20,10 +21,15 @@ new_merchant1 = {
 merchant1 = Merchant.new(new_merchant1)
 merchant1.save
 
-product1.name = 'xbox'
-product1.update
+new_stock1 = {
+  'product_id' => product1.id,
+  'merchant_id' => merchant1.id,
+  'price' => 500
+}
 
-merchant1.name = "Asda"
-merchant1.update
+stock1 = Stock.new(new_stock1)
+stock1.save
 
-binding.pry
+
+
+# binding.pry
