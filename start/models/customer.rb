@@ -37,4 +37,10 @@ class Customer
     SqlRunner.run(sql)
   end
 
+  def self.all()
+    sql = "SELECT * FROM customers"
+    data = SqlRunner.run(sql)
+    return data.map{|customer| Customer.new(customer)}
+  end
+
 end
