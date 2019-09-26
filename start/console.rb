@@ -6,6 +6,7 @@ require('pry')
 
 Merchant.delete_all
 Product.delete_all
+Customer.delete_all
 
 
 new_product1 = {
@@ -38,6 +39,5 @@ new_customer = {
 
 customer1 = Customer.new(new_customer)
 customer1.save
-
 
 # binding.pry
