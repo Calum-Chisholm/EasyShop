@@ -40,4 +40,16 @@ class Product
     SqlRunner.run(sql)
   end
 
+  def merchants()
+    sql = "SELECT stock.*, merchants.* FROM stock
+            INNER JOIN products
+            ON products.id = stock.product_id
+            INNER JOIN merchants
+            on merchants.id = stock.merchant_id
+            WHERE products.id = $1"
+    values = [@id]
+    merchants = SqlRunner.run(sql, values)
+    return merchants.map {|merchant| Product.new(merchant)}
+  end
+
 end

@@ -51,7 +51,7 @@ class Merchant
             WHERE merchants.id = $1"
     values = [@id]
     products = SqlRunner.run(sql, values)
-    return products.map {|products| Product.new(products)}
+    return products.map {|product| Product.new(product)}
   end
 
 end
