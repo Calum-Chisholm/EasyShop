@@ -18,7 +18,7 @@ class Merchant
   end
 
   def update()
-    sql = "UPDATE merchants SET name = $1 
+    sql = "UPDATE merchants SET name = $1
     WHERE id = $2"
     values = [@name, @id]
     SqlRunner.run(sql, values)
@@ -40,6 +40,18 @@ class Merchant
   def self.delete_all()
     sql = "DELETE FROM merchants"
     SqlRunner.run(sql)
+  end
+
+  def products()
+    sql = "SELECT stock.*, products.* FROM stock
+            INNER JOIN products
+            ON products.id = stock.product_id
+            INNER JOIN merchants
+            on merchants.id = stock.merchant_id
+            WHERE merchants.id = $1"
+    values = [@id]
+    products = SqlRunner.run(sql, values)
+    return products.map {|products| Product.new(products)}
   end
 
 end

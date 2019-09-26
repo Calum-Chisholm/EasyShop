@@ -84,4 +84,4 @@ new_customer = {
 customer1 = Customer.new(new_customer)
 customer1.save
 
-# binding.pry
+binding.pry

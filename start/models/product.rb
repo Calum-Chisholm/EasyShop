@@ -7,7 +7,6 @@ class Product
   def initialize(options)
     @id = options['id'].to_i if options['id']
     @name = options['name']
-    @catagory = options['catagory']
   end
 
   def save()
