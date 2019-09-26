@@ -26,7 +26,4 @@ product1.update
 merchant1.name = "Asda"
 merchant1.update
 
-product1.delete
-merchant1.delete
-
 binding.pry
