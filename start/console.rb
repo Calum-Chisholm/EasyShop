@@ -9,6 +9,7 @@ Merchant.delete_all
 Product.delete_all
 Customer.delete_all
 Purchase.delete_all
+Stock.delete_all
 
 
 new_product1 = {
@@ -106,6 +107,9 @@ purchase2 = Purchase.new(new_purchase2)
 purchase2.save
 purchase3 = Purchase.new(new_purchase3)
 purchase3.save
+
+customer1.buy(stock3, 3)
+
 
 
 binding.pry

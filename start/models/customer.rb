@@ -1,4 +1,5 @@
 require_relative("../db/sql_runner")
+require_relative("./purchase")
 
 class Customer
 
@@ -19,8 +20,8 @@ class Customer
   end
 
   def update()
-    sql = "UPDATE customers SET (name, wallet, stock_id) = ($1, $2)
-    WHERE id = $4"
+    sql = "UPDATE customers SET (name, wallet) = ($1, $2)
+    WHERE id = $3"
     values = [@name, @wallet, @id]
     SqlRunner.run(sql, values)
   end
@@ -54,6 +55,15 @@ class Customer
     values = [@id]
     purchase_hashes = SqlRunner.run(sql, values)
     return purchase_hashes.map { |purchases| Purchase.new(purchases)}
+  end
+
+  def buy(stock, quantity)
+    self.wallet = @wallet - (stock.price * quantity)
+    self.update
+     new_purchase = Purchase.new('stock_id' => stock.id,
+    'customer_id' => self.id,
+    'quantity' => quantity)
+     new_purchase.save
   end
 
 end
