@@ -26,4 +26,15 @@ class Purchase
     SqlRunner.run(sql, values)
   end
 
+  def self.delete_all()
+    sql = "DELETE FROM purchases"
+    SqlRunner.run(sql)
+  end
+
+  def delete()
+    sql = "DELETE FROM purchases where id = $1"
+    values = [@id]
+    SqlRunner.run(sql, values)
+  end
+
 end

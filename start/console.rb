@@ -8,6 +8,7 @@ require('pry')
 Merchant.delete_all
 Product.delete_all
 Customer.delete_all
+Purchase.delete_all
 
 
 new_product1 = {
@@ -106,7 +107,5 @@ purchase2.save
 purchase3 = Purchase.new(new_purchase3)
 purchase3.save
 
-purchase1.quantity = 4
-purchase1.update
 
 binding.pry
