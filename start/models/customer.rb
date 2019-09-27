@@ -1,5 +1,6 @@
 require_relative("../db/sql_runner")
 require_relative("./purchase")
+require 'pry'
 
 class Customer
 
@@ -54,15 +55,18 @@ class Customer
           WHERE purchases.customer_id = $1"
     values = [@id]
     purchase_hashes = SqlRunner.run(sql, values)
-    return purchase_hashes.map { |purchases| Purchase.new(purchases)}
+    purchased_data = purchase_hashes.map { |item| Purchase.new(item)}
+    stock_data = purchase_hashes.map { |item| Stock.new(item)}
+    return purchased_data.concat(stock_data)
   end
 
   def buy(stock, quantity)
     self.wallet = @wallet - (stock.price * quantity)
     self.update
-     new_purchase = Purchase.new('stock_id' => stock.id,
-    'customer_id' => self.id,
-    'quantity' => quantity)
+     new_purchase = Purchase.new(
+      'stock_id' => stock.id,
+      'customer_id' => self.id,
+      'quantity' => quantity)
      new_purchase.save
   end
 

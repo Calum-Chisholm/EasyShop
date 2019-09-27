@@ -109,7 +109,3 @@ purchase3 = Purchase.new(new_purchase3)
 purchase3.save
 
 customer1.buy(stock3, 3)
-
-
-
-binding.pry
