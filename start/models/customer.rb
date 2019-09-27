@@ -42,4 +42,18 @@ class Customer
     return data.map{|customer| Customer.new(customer)}
   end
 
+  def purchases()
+    sql = "SELECT stock.*, purchases.* FROM stock
+          INNER JOIN products
+          ON products.id = stock.product_id
+          INNER JOIN merchants
+          on merchants.id = stock.merchant_id
+          INNER JOIN purchases
+          ON stock.id = purchases.stock_id
+          WHERE purchases.customer_id = $1"
+    values = [@id]
+    purchase_hashes = SqlRunner.run(sql, values)
+    return purchase_hashes.map { |purchases| Purchase.new(purchases)}
+  end
+
 end
