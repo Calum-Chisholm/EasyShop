@@ -3,8 +3,11 @@
 <p><%= @merchant.name %></P>
 
   <% @merchant.products.each do |product| %>
-  <p><%= product.name %> <%= product.stock %></p>
+  <p><%= product.name %></p>
   <% end %>
 
-
-<p><%= @stock.price %></p>
+  <% @merchant.products.each do |product| %>
+  <% product.stock.each do |stock| %>
+  <p><%= stock.price %></p>
+  <% end  %>
+  <% end %>
