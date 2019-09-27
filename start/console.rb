@@ -106,4 +106,7 @@ purchase2.save
 purchase3 = Purchase.new(new_purchase3)
 purchase3.save
 
+purchase1.quantity = 4
+purchase1.update
+
 binding.pry

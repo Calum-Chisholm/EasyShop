@@ -19,4 +19,11 @@ class Purchase
     @id = id['id'].to_i
   end
 
+  def update()
+    sql = "UPDATE purchases SET (stock_id, customer_id, quantity) = ($1, $2, $3)
+    WHERE id = $4"
+    values = [@stock_id, @customer_id, @quantity, @id]
+    SqlRunner.run(sql, values)
+  end
+
 end
