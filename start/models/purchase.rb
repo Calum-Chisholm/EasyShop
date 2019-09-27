@@ -37,4 +37,10 @@ class Purchase
     SqlRunner.run(sql, values)
   end
 
+  def self.all()
+    sql = "SELECT * FROM purchases"
+    data = SqlRunner.run(sql)
+    return data.map{|purchase| Purchase.new(purchase)}
+  end
+
 end
