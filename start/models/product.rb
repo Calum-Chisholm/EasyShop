@@ -52,4 +52,14 @@ class Product
     return merchants.map {|merchant| Product.new(merchant)}
   end
 
+  def stock()
+    sql = "SELECT stock.* FROM stock
+            INNER JOIN products
+            ON products.id = stock.product_id
+            WHERE product_id = $1"
+    values = [@id]
+    item_stock = SqlRunner.run(sql, values)
+    return item_stock.map {|stock| Stock.new(stock)}
+  end
+
 end
