@@ -1,1 +1,10 @@
-<p><%= @merchant.name %></p>
+
+
+<p><%= @merchant.name %></P>
+
+  <% @merchant.products.each do |product| %>
+  <p><%= product.name %></p>
+  <% end %>
+
+
+<p><%= @stock.price %></p>

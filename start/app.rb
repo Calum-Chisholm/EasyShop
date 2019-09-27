@@ -24,5 +24,6 @@ end
 
 get '/merchant/:id/stock' do
   @merchant = Merchant.find(params['id'].to_i)
+  @stock = Stock.find_by_merchant(params['id'].to_i)
   erb(:merchants_stock)
 end
