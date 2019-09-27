@@ -54,4 +54,12 @@ class Merchant
     return products.map {|product| Product.new(product)}
   end
 
+  def self.find(id)
+    sql = "SELECT * FROM merchants
+    WHERE id = $1"
+    values = [id]
+    results = SqlRunner.run(sql, values)
+    return Merchant.new(results.first)
+  end
+
 end
