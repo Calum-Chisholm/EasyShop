@@ -62,4 +62,15 @@ class Product
     return item_stock.map {|stock| Stock.new(stock)}
   end
 
+  def price_by_merchant(id)
+   sql ="SELECT stock.* FROM stock
+         INNER JOIN products
+         ON products.id = stock.product_id
+         WHERE stock.merchant_id = $1
+         AND stock.product_id = $2"
+   values =[id, @id]
+   item_stock = SqlRunner.run(sql, values)
+   return item_stock.map {|stock| Stock.new(stock)}
+  end
+
 end
