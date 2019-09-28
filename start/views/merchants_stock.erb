@@ -2,8 +2,8 @@
 
 <p><%= @merchant.name %></P>
 
-  <% @merchant.products.each do |product| %>
-  <p><%= product.name %><% product.price_by_merchant(@merchant.id).each do |stock| %>
-   <%= stock.price %> </p>
+  <% @merchant.products.each do |product| %><% product.price_by_merchant(@merchant.id).each do |stock| %>
+  <p><a href="../product/<%= product.id %>/<%= stock.price %>"><%= product.name %>
+  : <%= stock.price %></a></p>
   <% end %>
   <% end %>

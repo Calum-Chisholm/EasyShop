@@ -26,3 +26,7 @@ get '/merchant/:id/stock' do
   @merchant = Merchant.find(params['id'].to_i)
   erb(:merchants_stock)
 end
+
+get '/merchant/product/:id/:price' do
+  binding.pry
+end
