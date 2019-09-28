@@ -109,9 +109,3 @@ purchase3 = Purchase.new(new_purchase3)
 purchase3.save
 
 binding.pry
-
-<% @merchant.products.each do |product| %>
-<% product.stock.each do |stock| %>
-<p><%= stock.price %></p>
-<% end  %>
-<% end %>
