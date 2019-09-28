@@ -7,7 +7,7 @@
   <% end %>
 
   <% @merchant.products.each do |product| %>
-  <% product.stock.each do |stock| %>
+  <% product.price_by_merchant(@merchant.id).each do |stock| %>
   <p><%= stock.price %></p>
-  <% end  %>
+  <% end %>
   <% end %>
