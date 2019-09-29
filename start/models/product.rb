@@ -73,4 +73,13 @@ class Product
    return item_stock.map {|stock| Stock.new(stock)}
   end
 
+  def self.find(id)
+    sql = "SELECT * FROM products
+    WHERE id = $1"
+    values = [id]
+    results = SqlRunner.run(sql, values)
+    return Product.new(results.first)
+  end
+
+
 end

@@ -51,4 +51,12 @@ class Stock
     return Stock.new(results.first)
   end
 
+  def self.find(id)
+    sql = "SELECT * FROM stock
+    WHERE id = $1"
+    values = [id]
+    results = SqlRunner.run(sql, values)
+    return Stock.new(results.first)
+  end
+
 end

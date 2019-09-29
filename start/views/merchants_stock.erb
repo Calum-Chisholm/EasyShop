@@ -3,7 +3,7 @@
 <p><%= @merchant.name %></P>
 
   <% @merchant.products.each do |product| %><% product.price_by_merchant(@merchant.id).each do |stock| %>
-  <p><a href="../product/<%= product.id %>/<%= stock.price %>"><%= product.name %>
+  <p><a href="../product/<%= product.id %>/<%= stock.id %>"><%= product.name %>
   : <%= stock.price %></a></p>
   <% end %>
   <% end %>
