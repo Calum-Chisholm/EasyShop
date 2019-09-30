@@ -1,5 +1,7 @@
 <% @customers.each do |customer| %>
-<p><%= customer.name %></p>
+<p id="account">Welcome <%= customer.name %>!</p>
 <% end %>
-<a href="/funds">Your funds</a>
-<a href="/merchants">Shop Now</a>
+
+<div class="button">
+<a id="shop_now"href="/merchants">Shop Now</a>
+</div>

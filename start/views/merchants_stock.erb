@@ -1,9 +1,8 @@
-
-
-<p><%= @merchant.name %></P>
-
+<div class="merchants_stock">
+  <p id=merchant_name><%= @merchant.name %></P>
   <% @merchant.products.each do |product| %><% product.price_by_merchant(@merchant.id).each do |stock| %>
-  <p><a href="../product/<%= product.id %>/<%= stock.id %>"><%= product.name %>
+  <p><a href="/product/<%= product.id %>/<%= stock.id %>"><%= product.name %>
   : <%= stock.price %></a></p>
   <% end %>
   <% end %>
+</div>

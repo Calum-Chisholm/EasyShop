@@ -2,10 +2,15 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
+    <link rel="stylesheet" href="/styles/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Pacifico|Squada+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
     <title>EasyShop</title>
   </head>
   <body>
-    <h1>EasyShop</h1>
-<%= yield %>
+    <a id="home"href="/"><i class="fas fa-home"></i></a>
+    <a id='funds' href="/funds"><i class="fas fa-pound-sign"></i></a>
+    <h1><span id="easy">Easy</span><span id="shop">Shop</span></h1>
+    <%= yield %>
   </body>
 </html>

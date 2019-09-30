@@ -1,0 +1,143 @@
+body {
+  background-color: #FAFFFD;
+}
+
+h1 {
+  text-align: center;
+  font-size: 100px;
+  font-style: italic;
+  font-family: 'pacifico'
+}
+
+#easy {
+  color: #3C91E6;
+}
+
+#shop {
+  color: #FA824C;
+}
+
+
+#shop_now:link {
+  color: black;
+  text-decoration: none;
+  background-color: #9FD356;
+ display: flex;
+ justify-content: center;
+ margin-top: 100px;
+ font-size: 50px;
+ width: 40%;
+ margin-left: 30%;
+ border-radius: 10px;
+ font-family: 'Squada one'
+}
+
+#shop_now:visited {
+  color: black;
+  text-decoration: none;
+  background-color: #9FD356;
+ display: flex;
+ justify-content: center;
+ margin-top: 100px;
+ font-size: 50px;
+ width: 40%;
+ margin-left: 30%;
+ border-radius: 10px;
+ font-family: 'Squada one'
+}
+
+#shop_now:hover {
+  background-color: #FA824C;
+  color: black;
+  text-decoration: none;
+ display: flex;
+ justify-content: center;
+ margin-top: 100px;
+ font-size: 50px;
+ width: 40%;
+ margin-left: 30%;
+ border-radius: 10px;
+ font-family: 'Squada one'
+}
+
+#shop_now:active {
+ position: relative;
+ top: 5px;
+ color: black;
+ text-decoration: none;
+ background-color: #3C91E6;
+ display: flex;
+ justify-content: center;
+ margin-top: 100px;
+ font-size: 50px;
+ width: 40%;
+ margin-left: 30%;
+ border-radius: 10px;
+ font-family: 'Squada one'
+}
+
+#home {
+  font-size: 50px;
+  color: #3C91E6;
+}
+
+#funds {
+  font-size: 50px;
+  color: #FA824C;
+  display: inline-block;
+  margin-left: 92.5%;
+}
+
+#account {
+  color: #9FD356;
+  margin-top: -345px;
+  margin-right: 900px;
+  display: flex;
+  justify-content: center;
+  letter-spacing: 5px;
+  font-size: 25px;
+  font-weight: 100;
+  font-family: 'Squada one'
+}
+
+.button {
+  margin-top: 350px;
+}
+
+#merchant_list:link {
+  text-decoration: none;
+  text-align: center;
+  font-family: 'Squada one';
+  font-size: 50px;
+  color: #342E37;
+}
+#merchant_list:visited {
+  text-decoration: none;
+  text-align: center;
+  font-family: 'Squada one';
+  font-size: 50px;
+  color: #342E37;
+}
+#merchant_list:hover {
+  text-decoration: underline;
+  text-align: center;
+  font-family: 'Squada one';
+  font-size: 50px;
+  color: #342E37;
+}
+#merchant_list:active {
+  position: relative;
+  top: 5px;
+  text-decoration: underline;
+  text-align: center;
+  font-family: 'Squada one';
+  font-size: 50px;
+  color: #9FD356;
+}
+
+#merchant_name {
+}
+
+.merchants_stock {
+  text-align: center;
+}

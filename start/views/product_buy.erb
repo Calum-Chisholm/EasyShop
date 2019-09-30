@@ -1,2 +1,7 @@
 <p><%= @product.name %>: <%= @stock.price %></p>
-<a href="#">Buy now</a>
+<form action="/product/buy" method="post">
+  <label for="quantity">Quantity:</label>
+  <input type="hidden" name="stock_id" value="<%= @stock.id %>">
+  <input type="number" name="quantity" id="quantity"/>
+  <input type="submit" value="Buy Now"/>
+</form>

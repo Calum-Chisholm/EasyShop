@@ -10,7 +10,7 @@ class Customer
   def initialize(details)
     @id = details['id'].to_i if details['id']
     @name = details['name']
-    @wallet = details['wallet']
+    @wallet = details['wallet'].to_i
   end
 
   def save()
@@ -61,7 +61,7 @@ class Customer
   end
 
   def buy(stock, quantity)
-    self.wallet = @wallet - (stock.price * quantity)
+    @wallet -= (stock.price.to_i * quantity)
     self.update
      new_purchase = Purchase.new(
       'stock_id' => stock.id,

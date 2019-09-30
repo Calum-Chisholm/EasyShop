@@ -27,8 +27,15 @@ get '/merchant/:id/stock' do
   erb(:merchants_stock)
 end
 
-get '/merchant/product/:id/:price' do
+get '/product/:id/:price' do
   @product = Product.find(params['id'].to_i)
   @stock = Stock.find(params['price'].to_i)
   erb(:product_buy)
+end
+
+post '/product/buy' do
+  customer = Customer.all
+  stock = Stock.find(params['stock_id'].to_i)
+  customer[0].buy(stock, params['quantity'].to_i)
+  redirect to '/'
 end
