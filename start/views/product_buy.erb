@@ -1,7 +1,11 @@
-<p><%= @product.name %>: <%= @stock.price %></p>
-<form action="/product/buy" method="post">
-  <label for="quantity">Please select quantity:</label>
-  <input type="hidden" name="stock_id" value="<%= @stock.id %>">
-  <input type="number" name="quantity" id="quantity"/>
-  <input type="submit" value="Buy Now"/>
-</form>
+<div class="buy">
+  <p><span id="product"><%= @product.name %></span><span id="price"><br><br>Current Price:   £<%= @stock.price %></span></p>
+  <div class="buy_form">
+    <form action="/product/buy" method="post">
+      <label for="quantity">Please select quantity:</label>
+      <input type="hidden" name="stock_id" value="<%= @stock.id %>">
+      <input type="number" name="quantity" id="quantity" value="1"/>
+      <input id="buy_button" type="submit" value="Buy Now"/>
+    </form>
+  </div>
+</div>

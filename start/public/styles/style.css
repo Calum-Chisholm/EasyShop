@@ -170,3 +170,62 @@ h1 {
   font-family: 'Ubuntu', sans-serif;
   color: #9FD356;
 }
+
+#product {
+  font-size: 100px;
+  font-family: 'Squada one';
+}
+
+#price {
+  font-size: 30px;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+.buy {
+  text-align: center;
+}
+
+.buy_form {
+  font-size: 30px;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+#quantity {
+  font-family: 'Squada one';
+  width: 30px;
+  height: 18px;
+  font-size: 25px;
+}
+
+#buy_button {
+  color: #FA824C;
+  outline-style: ridge;
+  outline-color: #3C91E6;
+  font-size: 25px;
+  font-family: 'Ubuntu', sans-serif;
+  background-color: #3C91E6;
+}
+#buy_button:visited {
+  color: #FA824C;
+  outline-style: ridge;
+  outline-color: #3C91E6;
+  font-size: 25px;
+  font-family: 'Ubuntu', sans-serif;
+  background-color: #3C91E6;
+}
+#buy_button:hover {
+  color: #FA824C;
+  outline-style: ridge;
+  outline-color: #3C91E6;;
+  font-size: 25px;
+  font-family: 'Squada one';
+  background-color: #FA824C;
+}
+#buy_button:active {
+  color: #FA824C;
+  outline-style: ridge;
+  outline-color: #3C91E6;
+  font-size: 25px;
+  font-family: 'Squada one';
+  background-color: #FAFFFD;
+}
