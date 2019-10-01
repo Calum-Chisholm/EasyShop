@@ -9,12 +9,7 @@
 <p>
 <% @customers.each do |customer| %>
  <% customer.purchased_purchases.each do |purchase| %>
- QUANTITY- <%= purchase.quantity %>
- <% @customers.each do |customer| %>
- <% customer.purchased_products.each do |product| %>
- PRODUCT-<%= product.name %>
-<% end %>
-<% end %>
+ QUANTITY- <%= purchase.quantity %> PRODUCT-<%= purchase.purchased_product[0].name %>
 <% end %>
 <% end %>
 
