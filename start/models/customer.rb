@@ -103,4 +103,13 @@ class Customer
     return hash.map { |item| Stock.new(item)}
   end
 
+  def purchased_purchases
+    sql = "SELECT purchases.* FROM purchases
+            WHERE purchases.customer_id = $1"
+    values = [@id]
+    hash = SqlRunner.run(sql, values)
+    return hash.map { |item| Purchase.new(item)}
+  end
+
+
 end
