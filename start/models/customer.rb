@@ -69,14 +69,14 @@ class Customer
      new_purchase.save
   end
 
-  def purchased_product(stock_id)
+  def purchased_products
     sql = "SELECT products.* FROM products
             INNER JOIN stock
             ON products.id = stock.product_id
             INNER JOIN purchases
-            ON stock.id = purchases.stock_id
-            WHERE purchases.stock_id = $1"
-    values = [stock_id]
+            ON purchases.stock_id = stock.id
+            WHERE purchases.customer_id = $1"
+    values = [@id]
     hash = SqlRunner.run(sql, values)
     return hash.map { |item| Product.new(item)}
   end

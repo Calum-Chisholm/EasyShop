@@ -43,5 +43,17 @@ class Purchase
     return data.map{|purchase| Purchase.new(purchase)}
   end
 
+  def purchased_product
+    sql = "SELECT products.* FROM products
+            INNER JOIN stock
+            ON products.id = stock.product_id
+            INNER JOIN purchases
+            ON stock.id = purchases.stock_id
+            WHERE purchases.stock_id = $1"
+    values = [@stock_id]
+    hash = SqlRunner.run(sql, values)
+    return hash.map { |item| Product.new(item)}
+  end
+
 
 end
