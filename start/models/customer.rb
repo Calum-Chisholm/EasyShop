@@ -56,8 +56,7 @@ class Customer
     values = [@id]
     purchase_hashes = SqlRunner.run(sql, values)
     purchased_data = purchase_hashes.map { |item| Purchase.new(item)}
-    stock_data = purchase_hashes.map { |item| Stock.new(item)}
-    return purchased_data.concat(stock_data)
+    return purchased_data
   end
 
   def buy(stock, quantity)
@@ -68,6 +67,18 @@ class Customer
       'customer_id' => self.id,
       'quantity' => quantity)
      new_purchase.save
+  end
+
+  def purchased_products
+    sql = "SELECT products.* FROM products
+            INNER JOIN stock
+            ON products.id = stock.product_id
+            INNER JOIN purchases
+            ON purchases.stock_id = stock.id
+            WHERE purchases.customer_id = $1"
+    values = [@id]
+    hash = SqlRunner.run(sql, values)
+    return hash.map { |item| Product.new(item)}
   end
 
 end

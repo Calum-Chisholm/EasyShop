@@ -13,6 +13,7 @@ get '/' do
 end
 
 get '/funds' do
+  @purchases = Purchase.all
   @customers = Customer.all
   erb(:funds)
 end

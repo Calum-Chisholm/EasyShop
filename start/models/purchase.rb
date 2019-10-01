@@ -43,4 +43,5 @@ class Purchase
     return data.map{|purchase| Purchase.new(purchase)}
   end
 
+
 end

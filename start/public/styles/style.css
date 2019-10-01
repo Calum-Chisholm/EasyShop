@@ -217,15 +217,15 @@ h1 {
   color: #FA824C;
   outline-style: ridge;
   outline-color: #3C91E6;;
-  font-size: 25px;
+  font-size: 35px;
   font-family: 'Squada one';
-  background-color: #FA824C;
+  background-color: #FAFFFD;
 }
 #buy_button:active {
   color: #FA824C;
   outline-style: ridge;
   outline-color: #3C91E6;
-  font-size: 25px;
+  font-size: 35px;
   font-family: 'Squada one';
   background-color: #FAFFFD;
 }
