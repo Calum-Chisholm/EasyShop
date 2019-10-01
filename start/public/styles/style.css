@@ -136,8 +136,37 @@ h1 {
 }
 
 #merchant_name {
+  font-size: 75px;
+  font-family: 'Squada one';
+  margin-bottom: -10px;
 }
 
-.merchants_stock {
-  text-align: center;
+.move{
+  margin-top:-85px;
+  margin-left: 550px;
+}
+
+
+#merchants_stock:link {
+  font-size: 35px;
+  text-decoration: none;
+  font-family: 'Ubuntu', sans-serif;
+  color: #9FD356;
+}
+#merchants_stock:visited {
+  text-decoration: none;
+  font-family: 'Ubuntu', sans-serif;
+  color: #9FD356;
+}
+#merchants_stock:hover {
+  margin-left: 20px;
+  text-decoration: underline;
+  font-family: 'Ubuntu', sans-serif;
+  color: #9FD356;
+}
+#merchants_stock:active {
+  margin-left: 20px;
+  text-decoration: underline;
+  font-family: 'Ubuntu', sans-serif;
+  color: #9FD356;
 }
