@@ -1,5 +1,11 @@
-<% @merchants.each do |merchant| %>
-<a id="merchant_list" href="/merchant/<%= merchant.id %>/stock">
-<p><%= merchant.name %></p>
-</a>
-<% end %>
+<a id="go_back1" href="/"><i class="fas fa-angle-double-left"></i></a>
+
+
+
+<div class="merchants">
+  <% @merchants.each do |merchant| %>
+    <a id="merchant_list" href="/merchant/<%= merchant.id %>/stock">
+     <p><%= merchant.name %></p>
+    </a>
+  <% end %>
+</div>

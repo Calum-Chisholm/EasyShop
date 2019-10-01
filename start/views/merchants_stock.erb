@@ -1,7 +1,9 @@
+<a id="go_back2" href="/merchants"><i class="fas fa-angle-double-left"></i></a>
+
 <div class="move">
   <p id="merchant_name"><%= @merchant.name %></P>
   <% @merchant.products.each do |product| %><% product.price_by_merchant(@merchant.id).each do |stock| %>
-  <p ><a id="merchants_stock" href="/product/<%= product.id %>/<%= stock.id %>"><%= product.name %></a></p>
+  <p ><a id="merchants_stock" href="/product/<%= product.id %>/<%= stock.id %>?merchant_id=<%= @merchant.id %>"><%= product.name %></a></p>
   <% end %>
   <% end %>
 </div>

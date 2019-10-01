@@ -1,18 +1,19 @@
-<div class="Transactions">
+<div class="transactions">
+  <div class="titles">
 
+    <p>Account balance:
+     <% @customers.each do |customer| %>
+     £<%= customer.wallet %></p>
+    <% end %>
 
-<p>Account balance:
+    <p>Transaction History:</p>
 
-<% @customers.each do |customer| %>
- £<%= customer.wallet %></p>
-<% end %>
-<p>
-<% @customers.each do |customer| %>
- <% customer.purchased_purchases.each do |purchase| %>
- QUANTITY- <%= purchase.quantity %> PRODUCT-<%= purchase.purchased_product[0].name %> MERCHANT- <%= purchase.purchased_merchant[0].name %>
-<% end %>
-<% end %>
+  </div>
 
-</p>
+    <p><% @customers.each do |customer| %>
+      <% customer.purchased_purchases.each do |purchase| %>
+        You purchased <%= purchase.quantity %> <%= purchase.purchased_product[0].name %> from <%= purchase.purchased_merchant[0].name %> for £ <%= purchase.purchased_stock[0].price %><br></p>
+      <% end %>
+    <% end %>
 
 </div>

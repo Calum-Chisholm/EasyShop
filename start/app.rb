@@ -30,6 +30,7 @@ end
 get '/product/:id/:price' do
   @product = Product.find(params['id'].to_i)
   @stock = Stock.find(params['price'].to_i)
+  @merchant_id = params['merchant_id']
   erb(:product_buy)
 end
 

@@ -104,6 +104,10 @@ h1 {
   margin-top: 350px;
 }
 
+.merchants {
+  margin-top: -175px;
+}
+
 #merchant_list:link {
   text-decoration: none;
   text-align: center;
@@ -142,7 +146,7 @@ h1 {
 }
 
 .move{
-  margin-top:-85px;
+  margin-top:-200px;
   margin-left: 550px;
 }
 
@@ -183,6 +187,7 @@ h1 {
 
 .buy {
   text-align: center;
+  margin-top: -150px;
 }
 
 .buy_form {
@@ -228,4 +233,31 @@ h1 {
   font-size: 35px;
   font-family: 'Squada one';
   background-color: #FAFFFD;
+}
+
+.transactions {
+  text-align: center;
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 25px;
+}
+
+.titles {
+  font-family: 'Squada one';
+  font-size: 50px;
+}
+
+#go_back1 {
+  font-size: 75px;
+  margin-left: 75px;
+  color: #9FD356;
+}
+#go_back2 {
+  font-size: 75px;
+  margin-left: 75px;
+  color: #9FD356;
+}
+#go_back3 {
+  font-size: 75px;
+  margin-left: 75px;
+  color: #9FD356;
 }
