@@ -1,7 +1,23 @@
+<div class="Transactions">
+
+
+<p>Account balance:
+
 <% @customers.each do |customer| %>
-<p><%= customer.wallet %></p>
+ £<%= customer.wallet %></p>
+<% end %>
+<p>
+<% @customers.each do |customer| %>
+ <% customer.purchased_purchases.each do |purchase| %>
+ QUANTITY- <%= purchase.quantity %>
+ <% @customers.each do |customer| %>
+ <% customer.purchased_products.each do |product| %>
+ PRODUCT-<%= product.name %>
+<% end %>
+<% end %>
+<% end %>
 <% end %>
 
-<% @purchases.each do |purchase| %>
-<p><%= purchase.quantity %></p>
-<% end %>
+</p>
+
+</div>
