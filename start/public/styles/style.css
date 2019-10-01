@@ -236,9 +236,14 @@ h1 {
 }
 
 .transactions {
+  margin-top: -150px;
   text-align: center;
   font-family: 'Ubuntu', sans-serif;
   font-size: 25px;
+}
+
+#account_balance {
+  margin-bottom: -50px;
 }
 
 .titles {
@@ -260,4 +265,65 @@ h1 {
   font-size: 75px;
   margin-left: 75px;
   color: #9FD356;
+}
+#go_back4 {
+  font-size: 75px;
+  margin-left: 75px;
+  color: #9FD356;
+}
+#go_back5 {
+  font-size: 75px;
+  margin-left: 75px;
+  color: #9FD356;
+}
+
+#add_funds {
+  padding: 5px;
+  text-align: center;
+  font-size: 30px;
+  text-decoration: none;
+  border-style: ridge;
+  border-radius: 10px;
+  border-color: #3C91E6;
+  color: #3C91E6;
+}
+
+.ammount_form {
+  font-size: 50px;
+  margin-top: -150px;
+  text-align: center;
+  font-family: 'Squada one';
+}
+
+#enter_ammount {
+  margin-bottom: -10px;
+}
+
+#ammount_input {
+  border-radius: 10px;
+  border-style: ridge;
+  width: 280px;
+  text-align: center;
+  font-family: 'Ubuntu', sans-serif;
+  margin-top: -50px;
+  font-size: 30px;
+}
+
+#ammount_submit {
+
+}
+
+input[type=button], input[type=submit], input[type=reset] {
+  font-size: 30px;
+  font-family: 'Squada one';
+  background-color: white;
+  border: solid;
+  border-radius: 10px;
+  border-style: ridge;
+  border-color: #3C91E6;
+  color: #3C91E6;
+  padding: 5px 60px;
+  text-decoration: none;
+  margin: 4px 2px;
+  cursor: pointer;
 }

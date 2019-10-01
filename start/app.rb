@@ -17,6 +17,17 @@ get '/funds' do
   erb(:funds)
 end
 
+get '/funds/edit' do
+  erb(:add_funds)
+end
+
+put '/funds/edit' do
+  customer = Customer.all
+  customer[0].wallet += (params['ammount'].to_i)
+  customer[0].update
+  redirect "/funds"
+end
+
 get '/merchants' do
   @merchants = Merchant.all
   erb(:merchants)

@@ -1,11 +1,13 @@
+<a id="go_back4" href="/"><i class="fas fa-angle-double-left"></i></a>
+
 <div class="transactions">
   <div class="titles">
 
-    <p>Account balance:
+    <p id="account_balance">Account balance:
      <% @customers.each do |customer| %>
      £<%= customer.wallet %></p>
     <% end %>
-
+    <p><a id="add_funds" href="/funds/edit">Add Funds</a></p>
     <p>Transaction History:</p>
 
   </div>
