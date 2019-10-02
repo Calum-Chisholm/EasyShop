@@ -1,21 +1,20 @@
-<a id="go_back4" href="/"><i class="fas fa-angle-double-left"></i></a>
+<div class="tooltip">
+  <a id="go_back4" href="/"><i class="fas fa-angle-double-left"></i></a><span class="tooltiptext">Previous Page</span>
+</div>
 
 <div class="transactions">
   <div class="titles">
-
     <p id="account_balance">Account balance:
      <% @customers.each do |customer| %>
-     £<%= customer.wallet %></p>
-    <% end %>
+       £<%= customer.wallet %>
+     <% end %>
+    </p>
     <p><a id="add_funds" href="/funds/edit">Add Funds</a></p>
     <p>Transaction History:</p>
-
   </div>
-
     <p><% @customers.each do |customer| %>
       <% customer.purchased_purchases.each do |purchase| %>
-        You purchased <%= purchase.quantity %> <%= purchase.purchased_product[0].name %> from <%= purchase.purchased_merchant[0].name %> for £ <%= purchase.purchased_stock[0].price %><br></p>
+        You purchased <%= purchase.quantity %> <%= purchase.purchased_product[0].name %> from <%= purchase.purchased_merchant[0].name %> for £<%= purchase.purchased_stock[0].price %><br></p>
       <% end %>
     <% end %>
-
 </div>

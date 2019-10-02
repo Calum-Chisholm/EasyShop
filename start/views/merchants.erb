@@ -1,11 +1,11 @@
-<a id="go_back1" href="/"><i class="fas fa-angle-double-left"></i></a>
+<div class="tooltip">
+  <a id="go_back1" href="/"><i class="fas fa-angle-double-left"></i></a><span class="tooltiptext">Previous Page</span>
+</div>
 
 
 
 <div class="merchants">
   <% @merchants.each do |merchant| %>
-    <a id="merchant_list" href="/merchant/<%= merchant.id %>/stock">
-     <p><%= merchant.name %></p>
-    </a>
+    <a id="merchant_list" href="/merchant/<%= merchant.id %>/stock"><p><%= merchant.name %></p></a>
   <% end %>
 </div>

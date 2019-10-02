@@ -67,6 +67,7 @@ class Customer
       'customer_id' => self.id,
       'quantity' => quantity)
      new_purchase.save
+     return new_purchase
   end
 
   def purchased_products

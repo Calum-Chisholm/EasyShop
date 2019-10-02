@@ -48,6 +48,12 @@ end
 post '/product/buy' do
   customer = Customer.all
   stock = Stock.find(params['stock_id'].to_i)
-  customer[0].buy(stock, params['quantity'].to_i)
-  redirect to '/'
+  @purchase = customer[0].buy(stock, params['quantity'].to_i)
+  erb(:purchased)
+end
+
+delete '/purchase/delete/:id' do
+  purchase = Purchase.find(params['id'].to_i)
+  purchase.delete
+  erb(:purchase_cancelled)
 end

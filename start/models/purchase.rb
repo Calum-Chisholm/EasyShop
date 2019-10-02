@@ -7,6 +7,7 @@ class Purchase
   attr_reader :id
 
   def initialize(details)
+    @id = details['id'].to_i if details['id']
     @stock_id = details['stock_id']
     @customer_id = details['customer_id']
     @quantity = details['quantity']
@@ -75,6 +76,14 @@ class Purchase
     values = [@stock_id]
     hash = SqlRunner.run(sql, values)
     return hash.map { |item| Stock.new(item)}
+  end
+
+  def self.find(id)
+    sql = "SELECT * FROM purchases
+    WHERE id = $1"
+    values = [id]
+    results = SqlRunner.run(sql, values)
+    return Merchant.new(results.first)
   end
 
 

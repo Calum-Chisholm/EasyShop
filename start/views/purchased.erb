@@ -1,0 +1,13 @@
+<h2 id="title_cover">-</h2>
+
+<p id="thank_you">Thank you!</p>
+<p id="thank_you_tag">For Your Purchase</p>
+
+<p id="purchased_data">You purchased <%= @purchase.quantity %> <%= @purchase.purchased_product[0].name %> from <%= @purchase.purchased_merchant[0].name %> for £<%= @purchase.purchased_stock[0].price %><br><br>Would you like to <br> continue shopping?</p>
+
+<a id="continue_shopping" href="/merchant/<%= @purchase.purchased_merchant[0].id %>/stock">Continue Shopping</a>
+
+<form class="cancel_order_button" action="/purchase/delete/<%= @purchase.id %>" method="post">
+  <input type="hidden" name="_method" value="delete">
+  <input id="cancel_order" type="submit" name="" value="Cancel Order">
+</form>

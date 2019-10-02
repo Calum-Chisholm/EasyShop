@@ -39,6 +39,49 @@ new_merchant2 = {
 new_merchant3 = {
   'name' => 'Asda'
 }
+new_merchant3 = {
+  'name' => 'Currys'
+}
+new_merchant3 = {
+  'name' => 'Dreams'
+}
+new_merchant3 = {
+  'name' => 'HarryGow'
+}
+new_merchant3 = {
+  'name' => 'McCalls'
+}
+new_merchant3 = {
+  'name' => 'Saisburrys'
+}
+new_merchant3 = {
+  'name' => 'Morrisons'
+}
+new_merchant3 = {
+  'name' => 'Aldi'
+}
+new_merchant3 = {
+  'name' => 'Lidl'
+}
+new_merchant3 = {
+  'name' => 'M&S'
+}
+new_merchant3 = {
+  'name' => 'NewLook'
+}
+new_merchant3 = {
+  'name' => 'Mango'
+}
+new_merchant3 = {
+  'name' => 'Boots'
+}
+new_merchant3 = {
+  'name' => 'Highland Industial supplies'
+}
+new_merchant3 = {
+  'name' => 'Farm and Housland'
+}
+
 
 merchant1 = Merchant.new(new_merchant1)
 merchant1.save

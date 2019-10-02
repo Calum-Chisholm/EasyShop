@@ -19,9 +19,9 @@ h1 {
 
 
 #shop_now:link {
-  color: black;
-  text-decoration: none;
-  background-color: #9FD356;
+ color: #342E37;
+ text-decoration: none;
+ background-color: #9FD356;
  display: flex;
  justify-content: center;
  margin-top: 100px;
@@ -33,9 +33,9 @@ h1 {
 }
 
 #shop_now:visited {
-  color: black;
-  text-decoration: none;
-  background-color: #9FD356;
+ color: #342E37;
+ text-decoration: none;
+ background-color: #9FD356;
  display: flex;
  justify-content: center;
  margin-top: 100px;
@@ -47,9 +47,9 @@ h1 {
 }
 
 #shop_now:hover {
-  background-color: #FA824C;
-  color: black;
-  text-decoration: none;
+ background-color: #FA824C;
+ color: #342E37;
+ text-decoration: none;
  display: flex;
  justify-content: center;
  margin-top: 100px;
@@ -63,7 +63,7 @@ h1 {
 #shop_now:active {
  position: relative;
  top: 5px;
- color: black;
+ color: #342E37;
  text-decoration: none;
  background-color: #3C91E6;
  display: flex;
@@ -136,10 +136,11 @@ h1 {
   text-align: center;
   font-family: 'Squada one';
   font-size: 50px;
-  color: #9FD356;
+  color: #3C91E6;
 }
 
 #merchant_name {
+  color: #342E37;
   font-size: 75px;
   font-family: 'Squada one';
   margin-bottom: -10px;
@@ -155,24 +156,24 @@ h1 {
   font-size: 35px;
   text-decoration: none;
   font-family: 'Ubuntu', sans-serif;
-  color: #9FD356;
+  color: #3C91E6;
 }
 #merchants_stock:visited {
   text-decoration: none;
   font-family: 'Ubuntu', sans-serif;
-  color: #9FD356;
+  color: #3C91E6;
 }
 #merchants_stock:hover {
   margin-left: 20px;
   text-decoration: underline;
   font-family: 'Ubuntu', sans-serif;
-  color: #9FD356;
+  color: #3C91E6;
 }
 #merchants_stock:active {
   margin-left: 20px;
   text-decoration: underline;
   font-family: 'Ubuntu', sans-serif;
-  color: #9FD356;
+  color: #3C91E6;
 }
 
 #product {
@@ -186,6 +187,7 @@ h1 {
 }
 
 .buy {
+  color: #342E37;
   text-align: center;
   margin-top: -150px;
 }
@@ -203,39 +205,63 @@ h1 {
 }
 
 #buy_button {
-  color: #FA824C;
-  outline-style: ridge;
-  outline-color: #3C91E6;
-  font-size: 25px;
-  font-family: 'Ubuntu', sans-serif;
-  background-color: #3C91E6;
+  font-size: 20px;
+  font-family: 'Squada one';
+  border: 3px;
+  border-radius: 10px;
+  border-style: ridge;
+  border-color: #3C91E6;
+  background-color: white;
+  color: #3C91E6;
+  padding: 7px 32px;
+  text-decoration: none;
+  margin: 4px 2px;
+  cursor: pointer;
 }
 #buy_button:visited {
-  color: #FA824C;
-  outline-style: ridge;
-  outline-color: #3C91E6;
-  font-size: 25px;
-  font-family: 'Ubuntu', sans-serif;
-  background-color: #3C91E6;
+  font-size: 20px;
+  font-family: 'Squada one';
+  border-radius: 10px;
+  border-style: ridge;
+  border-color: #3C91E6;
+  background-color: white;
+  color: #3C91E6;
+  padding: 7px 32px;
+  text-decoration: none;
+  margin: 4px 2px;
+  cursor: pointer;
 }
 #buy_button:hover {
-  color: #FA824C;
-  outline-style: ridge;
-  outline-color: #3C91E6;;
-  font-size: 35px;
+  font-size: 20px;
   font-family: 'Squada one';
-  background-color: #FAFFFD;
+  border-radius: 10px;
+  border-style: ridge;
+  border-color: #3C91E6;
+  background-color: white;
+  color: #3C91E6;
+  padding: 7px 32px;
+  text-decoration: none;
+  margin: 4px 2px;
+  cursor: pointer;
 }
 #buy_button:active {
-  color: #FA824C;
-  outline-style: ridge;
-  outline-color: #3C91E6;
-  font-size: 35px;
+  position: relative;
+  top: 5px;
+  font-size: 20px;
   font-family: 'Squada one';
-  background-color: #FAFFFD;
+  border-radius: 10px;
+  border-style: ridge;
+  border-color: #3C91E6;
+  background-color: white;
+  color: #3C91E6;
+  padding: 7px 32px;
+  text-decoration: none;
+  margin: 4px 2px;
+  cursor: pointer;
 }
 
 .transactions {
+  color: #342E37;
   margin-top: -150px;
   text-align: center;
   font-family: 'Ubuntu', sans-serif;
@@ -247,6 +273,7 @@ h1 {
 }
 
 .titles {
+  color: #342E37;
   font-family: 'Squada one';
   font-size: 50px;
 }
@@ -289,6 +316,7 @@ h1 {
 }
 
 .ammount_form {
+  color: #342E37;
   font-size: 50px;
   margin-top: -150px;
   text-align: center;
@@ -310,10 +338,6 @@ h1 {
 }
 
 #ammount_submit {
-
-}
-
-input[type=button], input[type=submit], input[type=reset] {
   font-size: 30px;
   font-family: 'Squada one';
   background-color: white;
@@ -322,8 +346,124 @@ input[type=button], input[type=submit], input[type=reset] {
   border-style: ridge;
   border-color: #3C91E6;
   color: #3C91E6;
-  padding: 5px 60px;
+  padding: 5px 100px;
   text-decoration: none;
   margin: 4px 2px;
   cursor: pointer;
 }
+
+#thank_you {
+  z-index: 2;
+  color: #3C91E6;
+  font-family: 'pacifico';
+  text-align: center;
+  font-size: 100px;
+  margin-top: -4000px;
+}
+
+#thank_you_tag {
+  margin-left: 420px;
+  margin-top: -150px;
+  color: #FA824C;
+  font-family: 'pacifico';
+  font-size: 30px;
+}
+
+#title_cover {
+  color: #FAFFFD;
+  margin-top: -2200px;
+  text-align: center;
+  font-size: 3000px;
+}
+
+#purchased_data {
+  color: #342E37;
+  text-align: center;
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 40px;
+}
+
+#continue_shopping {
+  padding: 10px;
+  margin-left: 525px;
+  font-size: 25px;
+  font-family: 'Squada one';
+  text-decoration: none;
+  color: #3C91E6;
+  border-style: ridge;
+  border-radius: 10px;
+  border-color: #3C91E6;
+  background-color: white;
+}
+
+
+#cancel_order {
+  font-size: 30px;
+  font-family: 'Squada one';
+  background-color: white;
+  border: solid;
+  border-radius: 10px;
+  border-style: ridge;
+  border-color: #3C91E6;
+  color: #3C91E6;
+  padding: 5px 27px;
+  text-decoration: none;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+.cancel_order_button {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+#purchase_cancelled {
+  margin-top: -50px;
+  font-family: 'Squada one';
+  text-align: center;
+  font-size: 100px;
+  color: #342E37;
+}
+
+
+.home_button_div{
+  margin-top: -75px;
+}
+
+#home_button {
+  margin-top: -100px;
+  margin-left: 540px;
+  padding: 10px;
+  font-size: 75px;
+  font-family: 'Squada one';
+  text-decoration: none;
+  color: #3C91E6;
+  border-style: ridge;
+  border-radius: 10px;
+  border-color: #3C91E6;
+  background-color: white;
+}
+
+.tooltip {
+ position: relative;
+ display: inline-block;
+}
+.tooltip .tooltiptext {
+ font-family: 'Ubuntu', sans-serif;
+ visibility: hidden;
+ width: 120px;
+ background-color: #342E37;
+ color: white;
+ text-align: center;
+ border-radius: 6px;
+ padding: 5px 0;
+ /* Position the tooltip */
+ position: absolute;
+ z-index: 1;
+}
+.tooltip:hover .tooltiptext {
+ visibility: visible;
+}
+</style>
+<body style="text-align:center;">
